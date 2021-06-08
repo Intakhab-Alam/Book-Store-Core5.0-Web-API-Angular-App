@@ -1,0 +1,25 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Decription</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of listOfBooks">
+            <td>{{book.id}}</td>
+            <td>{{book.title}}</td>
+            <td>{{book.description}}</td>
+            <td>
+              <a routerLink="/update-book/{{book.id}}">
+                <i class="fa fa-edit" style="font-size:20px;color:blue;"></i>
+              </a>&nbsp;&nbsp;
+              <i (click)="deleteBook(book.id)" class="fa fa-trash" style="font-size:20px;color:red;"></i>           
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

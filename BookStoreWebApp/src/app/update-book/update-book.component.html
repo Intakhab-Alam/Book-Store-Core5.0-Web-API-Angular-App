@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <form [formGroup]="editBookForm" (ngSubmit)="updateBook()">
+        <div class="form-group">
+            <label>Title</label>
+            <input type="text" name="title" formControlName="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Description</label>
+            <input type="text" name="description" formControlName="description" class="form-control">
+        </div>
+        <div class="form-group mt-2">
+            <input type="submit" value="Update Book" class="btn btn-primary">
+        </div>
+    </form>
+</div>
